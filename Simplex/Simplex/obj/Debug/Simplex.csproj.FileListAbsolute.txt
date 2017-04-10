@@ -1,0 +1,10 @@
+D:\My project\Simplex Project using C#\Simplex\Simplex\Simplex\bin\Debug\Simplex.exe
+D:\My project\Simplex Project using C#\Simplex\Simplex\Simplex\bin\Debug\Simplex.pdb
+D:\My project\Simplex Project using C#\Simplex\Simplex\Simplex\obj\Debug\Simplex.csprojResolveAssemblyReference.cache
+D:\My project\Simplex Project using C#\Simplex\Simplex\Simplex\obj\Debug\Simplex.FRM_Start.resources
+D:\My project\Simplex Project using C#\Simplex\Simplex\Simplex\obj\Debug\Simplex.Properties.Resources.resources
+D:\My project\Simplex Project using C#\Simplex\Simplex\Simplex\obj\Debug\Simplex.csproj.GenerateResource.Cache
+D:\My project\Simplex Project using C#\Simplex\Simplex\Simplex\obj\Debug\Simplex.exe
+D:\My project\Simplex Project using C#\Simplex\Simplex\Simplex\obj\Debug\Simplex.pdb
+D:\My project\Simplex Project using C#\Simplex\Simplex\Simplex\obj\Debug\Simplex.Frm_Equation.resources
+D:\My project\Simplex Project using C#\Simplex\Simplex\Simplex\obj\Debug\Simplex.exe.licenses
