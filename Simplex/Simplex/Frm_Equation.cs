@@ -280,5 +280,15 @@ namespace Simplex
              MessageBox.Show( res);
             //resultForm.ShowResult();
         }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

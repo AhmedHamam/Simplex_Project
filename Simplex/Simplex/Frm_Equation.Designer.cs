@@ -53,8 +53,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 22F);
             this.label1.Location = new System.Drawing.Point(247, 9);
@@ -98,9 +97,11 @@
             this.btn_Exit.Size = new System.Drawing.Size(114, 37);
             this.btn_Exit.TabIndex = 7;
             this.btn_Exit.Text = "Exit";
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // btn_Calculate
             // 
+            this.btn_Calculate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Calculate.Appearance.Font = new System.Drawing.Font("Tahoma", 18F);
             this.btn_Calculate.Appearance.Options.UseFont = true;
             this.btn_Calculate.Image = ((System.Drawing.Image)(resources.GetObject("btn_Calculate.Image")));
@@ -114,8 +115,10 @@
             // 
             // btn_Back
             // 
+            this.btn_Back.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_Back.Appearance.Font = new System.Drawing.Font("Tahoma", 18F);
             this.btn_Back.Appearance.Options.UseFont = true;
+            this.btn_Back.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Back.Image = ((System.Drawing.Image)(resources.GetObject("btn_Back.Image")));
             this.btn_Back.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.btn_Back.Location = new System.Drawing.Point(345, 16);
@@ -123,6 +126,7 @@
             this.btn_Back.Size = new System.Drawing.Size(147, 37);
             this.btn_Back.TabIndex = 8;
             this.btn_Back.Text = "Back";
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
             // panel1
             // 
@@ -140,8 +144,10 @@
             // 
             // Frm_Equation
             // 
+            this.AcceptButton = this.btn_Calculate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btn_Back;
             this.ClientSize = new System.Drawing.Size(869, 375);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.P_C);
@@ -149,6 +155,7 @@
             this.Controls.Add(this.P1);
             this.Name = "Frm_Equation";
             this.Text = "Simplex Method";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.P1.ResumeLayout(false);
             this.P1.PerformLayout();
             this.panel1.ResumeLayout(false);
