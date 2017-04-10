@@ -9,9 +9,9 @@ namespace Simplex
     public abstract class AbstractSimplex
     {
 
-        //public static int LESS_THAN = 0;
-        //public static int GREATER_THAN = 1;
-        //public static int EQUAL_TO = 2;
+        public static int LESS_THAN = 0;
+        public static int GREATER_THAN = 1;
+        public static int EQUAL_TO = 2;
         ///*
         //public final static int GREATER_EQUAL = 3;
         //public final static int LESS_EQUAL = 4;
