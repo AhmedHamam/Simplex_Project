@@ -79,7 +79,7 @@ namespace Simplex
             for (int i = 0; i < Variables; i++)
             {
                 l1 = new Label();
-                l1.SetBounds((130 + (60 * i)), 5, 40, 25);
+                l1.SetBounds((130 + (60 * i)), 5, 50, 25);
                 l1.Text = "X" + (i).ToString();
                 l1.BackColor = Color.Yellow;
                 P_Z.Controls.Add(l1);
@@ -87,8 +87,8 @@ namespace Simplex
                 NumericUpDown num = new NumericUpDown();
                 num = new NumericUpDown();             
                 num.SetBounds((130 + (60 * i)), 70, 50, 25);                
-                num.Minimum = -99;
-                num.Maximum = 99;
+                num.Minimum = -999;
+                num.Maximum = 999;
                 num.Value = 0;
                 objFunction[i] = num;
                 P_Z.Controls.Add(num);
@@ -132,7 +132,7 @@ namespace Simplex
                 {
 
                     l1 = new Label();
-                    l1.SetBounds((130 + (60 * j)), 5+110*(i), 40, 25);
+                    l1.SetBounds((130 + (60 * j)), 5+110*(i), 50, 25);
                     l1.Text = "X" + (j).ToString();
                     l1.BackColor = Color.Yellow;
                     P_C.Controls.Add(l1);
@@ -170,7 +170,7 @@ namespace Simplex
                 // Add =>, <=, =
                 comboxBox.Items.AddRange(signs);
                 // Locate it
-                comboxBox.SetBounds(150+50 * Variables , i * 100 + 40, 60, 30);
+                comboxBox.SetBounds(300+50 * Variables , i * 110 + 40, 60, 30);
                 // Set default selected index to '='
                 comboxBox.SelectedIndex = 1;
                 // Add to array
@@ -180,11 +180,11 @@ namespace Simplex
 
                 // Create textbox for right side of function
                 NumericUpDown txtBox = new NumericUpDown();
-                txtBox.Maximum = 99;
-                txtBox.Minimum = -99;
+                txtBox.Maximum = 999;
+                txtBox.Minimum = -999;
                 txtBox.Value = 0;
                 // Locate it
-                txtBox.SetBounds(230 + Variables*50, i * 100 + 40, 60, 30);
+                txtBox.SetBounds(380 + Variables*50, i * 110 + 40, 60, 30);
                 constraintFunctionRight[i] = txtBox;
                 P_C.Controls.Add(txtBox);
             }
@@ -216,9 +216,12 @@ namespace Simplex
                 }
                 // Represents sign of constraint
                 int bound = 0;
-                if (constraintSigns[i].SelectedIndex == 0) bound = PrimalSimplex.LESS_THAN;
-                else if (constraintSigns[i].SelectedIndex == 1) bound = PrimalSimplex.EQUAL_TO;
-                else bound = PrimalSimplex.GREATER_THAN;
+                if (constraintSigns[i].SelectedIndex == 0) 
+                    bound = PrimalSimplex.LESS_THAN;
+                else if (constraintSigns[i].SelectedIndex == 1)
+                    bound = PrimalSimplex.EQUAL_TO;
+                else 
+                    bound = PrimalSimplex.GREATER_THAN;
 
                 // Create object of DContraint passing arguments of variables, sign and right side, and store it to array
                 constraints[i] = new DConstraint(consValues, bound, right);
@@ -270,14 +273,20 @@ namespace Simplex
             // Get coefficients of objective function from simplex
             double[] targetCoefficientValues = ds.getCoefficients();
             // Get answer function
-            string res = "Z = " + ds.getObjectiveResult() + "\n";
+            string res="";
+            string max="";
+            if (mode == true)
+                max= "Maxmization";
+            else
+                max += "Minimization";
+            res=max+"\n" + "Z = " + ds.getObjectiveResult() + "\n";
             // We do some formatting data here
             for (int i = 0; i < targetCoefficients.Length; ++i)
             {
                 res = res + " X" + i + " : " + targetCoefficientValues[i] + "\n";
             }
             // Show ResultForm with our result
-             MessageBox.Show( res);
+             MessageBox.Show( res,max);
             //resultForm.ShowResult();
         }
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+//الكلاس الخاص بكل معادلة 
 namespace Simplex
 {
     class DConstraint

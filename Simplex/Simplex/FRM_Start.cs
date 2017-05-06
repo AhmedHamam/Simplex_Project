@@ -9,11 +9,12 @@ using System.Windows.Forms;
 
 namespace Simplex
 {
-    public partial class FRM_Start : DevExpress.XtraEditors.XtraForm
+    public partial class FRM_Start : Form
     {
         public FRM_Start()
         {
             InitializeComponent();
+           // rb_Max.Checked = true;
         }
         public static int Variables 
           { 
@@ -42,6 +43,11 @@ namespace Simplex
                 {
                     Variables = int.Parse(N_Var.Text);
                     Constraints = int.Parse(N_Con.Text);
+                    if (Variables > 15)
+                        Variables = 15;
+                    if (Constraints > 15)
+                        Constraints = 15;
+
                     max = rb_Max.Checked;
                     Frm_Equation frm = new Frm_Equation();
                     frm.Variables = Variables;

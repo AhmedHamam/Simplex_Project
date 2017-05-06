@@ -90,6 +90,7 @@
             // 
             this.btn_Exit.Appearance.Font = new System.Drawing.Font("Tahoma", 18F);
             this.btn_Exit.Appearance.Options.UseFont = true;
+            this.btn_Exit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Exit.Image")));
             this.btn_Exit.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.btn_Exit.Location = new System.Drawing.Point(536, 90);
@@ -117,6 +118,11 @@
             this.N_Var.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.N_Var.Font = new System.Drawing.Font("Tahoma", 16F);
             this.N_Var.Location = new System.Drawing.Point(353, 94);
+            this.N_Var.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
             this.N_Var.Minimum = new decimal(new int[] {
             2,
             0,
@@ -136,6 +142,11 @@
             this.N_Con.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.N_Con.Font = new System.Drawing.Font("Tahoma", 16F);
             this.N_Con.Location = new System.Drawing.Point(353, 34);
+            this.N_Con.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
             this.N_Con.Minimum = new decimal(new int[] {
             2,
             0,
@@ -226,14 +237,14 @@
             // FRM_Start
             // 
             this.AcceptButton = this.btn_Ok;
-            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btn_Exit;
             this.ClientSize = new System.Drawing.Size(714, 357);
             this.Controls.Add(this.p2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.P1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FRM_Start";
             this.Text = "Simplex";
